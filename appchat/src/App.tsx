@@ -8,7 +8,7 @@ function App() {
          <div>
             <h1>Crear usuario</h1>
          </div>
-         <ContentPasteIcon/>
+         <ContentPasteIcon style={{color:'white',fontSize:'5rem'}}/>
         </div>
       </header>
     </main>
