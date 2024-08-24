@@ -27,7 +27,16 @@ function App() {
             label='Correo electronico'
             variant='outlined'
             value=''
-            sx={{width:'100%'}}
+            sx={{width:'100%',marginBottom:'1rem'}}
+          />
+
+          <MuiTextField
+            name='telefono'
+            type='tel'
+            label='Teléfono celular'
+            variant='outlined'
+            value=''
+            sx={{width:'100%',marginBottom:'1rem'}}
           />
       </FormWrapper>
     </main>
