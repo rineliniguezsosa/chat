@@ -10,7 +10,7 @@ function App() {
     email:'',
     telefono:''
   })
-  
+
   return (
     <main>
       <header>
@@ -32,8 +32,9 @@ function App() {
             type='email'
             label='Correo electronico'
             variant='outlined'
-            value=''
+            value={form.email}
             sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
           />
 
           <MuiTextField
@@ -41,8 +42,9 @@ function App() {
             type='tel'
             label='Teléfono celular'
             variant='outlined'
-            value=''
+            value={form.telefono}
             sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
           />
       </FormWrapper>
     </main>
