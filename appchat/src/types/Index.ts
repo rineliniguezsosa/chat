@@ -11,3 +11,11 @@ export interface FormWrapperProps {
     title:string,
     children:React.ReactNode
 }
+
+export interface MuiTextFieldProps {
+    variant:'outlined'
+    label:'string'
+    type:'text'|'tel'|'email'
+    name:'string'
+    value:'string'
+}
