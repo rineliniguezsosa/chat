@@ -14,8 +14,8 @@ export interface FormWrapperProps {
 
 export interface MuiTextFieldProps {
     variant:'outlined'
-    label:'string'
+    label:string
     type:'text'|'tel'|'email'
-    name:'string'
-    value:'string'
+    name:string
+    value:string
 }
