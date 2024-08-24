@@ -16,7 +16,7 @@ function App() {
           <AccessTimeIcon/><span>En menos de 5 minutos</span>
         </div>
       </header>
-      <MuiLinearProgress value={40} variant='determinate'/>
+      <MuiLinearProgress sx={{width:'100%'}} value={40} variant='determinate'/>
     </main>
   )
 }
