@@ -2,6 +2,7 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { MuiLinearProgress } from './components/MuiLinearProgress';
 import { FormWrapper } from './components/FormWrapper';
+import { MuiTextField } from './components/MuiTextField';
 
 function App() {
   return (
@@ -20,7 +21,14 @@ function App() {
       <MuiLinearProgress sx={{width:'100%'}} value={40} variant='determinate'/>
 
       <FormWrapper title='Datos de contacto'>
-          <h1>Hola</h1>
+          <MuiTextField
+            name='email'
+            type='email'
+            label='Correo electronico'
+            variant='outlined'
+            value=''
+            sx={{width:'100%'}}
+          />
       </FormWrapper>
     </main>
   )
