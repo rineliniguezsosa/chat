@@ -1,5 +1,6 @@
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import { MuiLinearProgress } from './components/MuiLinearProgress';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <AccessTimeIcon/><span>En menos de 5 minutos</span>
         </div>
       </header>
+      <MuiLinearProgress value={40} variant='determinate'/>
     </main>
   )
 }
