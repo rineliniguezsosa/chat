@@ -17,6 +17,10 @@ function App() {
         </div>
       </header>
       <MuiLinearProgress sx={{width:'100%'}} value={40} variant='determinate'/>
+
+      <div style={{width:'100%',border:'1px red solid'}}>
+
+      </div>
     </main>
   )
 }
