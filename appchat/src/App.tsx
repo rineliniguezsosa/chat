@@ -6,6 +6,11 @@ import { MuiTextField } from './components/MuiTextField';
 import { useForm } from './hooks/useForm';
 
 function App() {
+  const { form, handleInputChange } = useForm({
+    email:'',
+    telefono:''
+  })
+  
   return (
     <main>
       <header>
