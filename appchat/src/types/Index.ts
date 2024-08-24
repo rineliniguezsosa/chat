@@ -18,7 +18,8 @@ export interface MuiTextFieldProps {
     type:'text'|'tel'|'email',
     name:string,
     value:string,
-    sx?:SxProps<Theme>
+    sx?:SxProps<Theme>,
+    onChange:(e:React.ChangeEvent<HTMLInputElement>)=> void
 }
 
 export interface FormValues {
