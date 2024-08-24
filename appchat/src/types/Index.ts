@@ -11,9 +11,3 @@ export interface FormWrapperProps {
     title:string,
     children:React.ReactNode
 }
-
-export interface MuiAvatarProps {
-    overlap:'circular',
-    badgeContent:React.ReactNode,
-    children:React.ReactNode
-}
