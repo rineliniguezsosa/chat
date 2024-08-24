@@ -1,5 +1,7 @@
+import { SxProps, Theme } from '@mui/system';
 
 export interface LinerProgressProps {
     variant:'determinate',
-    value:number
+    value:number,
+    sx?:SxProps<Theme>
 }
