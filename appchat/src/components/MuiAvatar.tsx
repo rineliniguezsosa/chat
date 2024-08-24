@@ -6,7 +6,7 @@ export const MuiAvatar = () => {
     <Badge 
         overlap='circular'
         badgeContent={
-         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 24, height: 24, borderRadius: '50%', backgroundColor: '#f174dc',marginTop:'1rem',border:'1px gray solid' }}>
+         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 24, height: 24, borderRadius: '50%', backgroundColor: '#f174dc',marginTop:'1rem' }}>
             <KeyboardArrowDownIcon sx={{ fontSize:14 }} />
           </div>
         }
