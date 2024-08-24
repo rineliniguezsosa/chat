@@ -7,4 +7,11 @@
 main {
   width: 100%;
   border: 1px red solid;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  width: 30%;
+  border:1px blue solid;
 }
