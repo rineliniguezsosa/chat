@@ -11,6 +11,6 @@ app.use(express.json())
 Connectdb()
 
 
-app.listen(process.env.PORT,()=>{
-    console.log(`Server running in the port ${process.env.PORT}`);
+app.listen(process.env.PORTSERVER,()=>{
+    console.log(`Server running in the port ${process.env.PORTSERVER}`);
 })
