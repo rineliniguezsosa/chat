@@ -5,14 +5,16 @@
 }
 
 main {
-  width: 100%;
-  border: 1px red solid;
+  width: 30%;
+  border: 2px red solid;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
 }
 
 header {
-  width: 30%;
+  width: 100%;
   border:1px blue solid;
   padding:3rem 1rem;
   background-color: #f174dc;
