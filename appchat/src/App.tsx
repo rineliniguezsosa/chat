@@ -1,4 +1,4 @@
-
+import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 
 function App() {
   return (
