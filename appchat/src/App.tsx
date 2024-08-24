@@ -19,8 +19,8 @@ function App() {
       </header>
       <MuiLinearProgress sx={{width:'100%'}} value={40} variant='determinate'/>
 
-      <FormWrapper>
-
+      <FormWrapper title='Datos de contacto'>
+          <h1>Hola</h1>
       </FormWrapper>
     </main>
   )
