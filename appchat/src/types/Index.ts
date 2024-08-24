@@ -20,3 +20,8 @@ export interface MuiTextFieldProps {
     value:string,
     sx?:SxProps<Theme>
 }
+
+export interface FormValues {
+    email: string;
+    telefono: string;
+}
