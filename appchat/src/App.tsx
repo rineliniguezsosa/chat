@@ -10,7 +10,8 @@ function App() {
     email:'',
     telefono:''
   })
-
+  console.log(form);
+  
   return (
     <main>
       <header>
