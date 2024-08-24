@@ -1,6 +1,7 @@
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { MuiLinearProgress } from './components/MuiLinearProgress';
+import { FormWrapper } from './components/FormWrapper';
 
 function App() {
   return (
@@ -18,9 +19,9 @@ function App() {
       </header>
       <MuiLinearProgress sx={{width:'100%'}} value={40} variant='determinate'/>
 
-      <div style={{width:'100%',border:'1px red solid'}}>
+      <FormWrapper>
 
-      </div>
+      </FormWrapper>
     </main>
   )
 }
