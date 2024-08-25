@@ -53,7 +53,7 @@ function App() {
          </div>
          <ContentPasteIcon style={{color:'white',fontSize:'5rem'}}/>
         </div>
-        <div>
+        <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
           <AccessTimeIcon/><span>En menos de 5 minutos</span>
         </div>
       </header>
