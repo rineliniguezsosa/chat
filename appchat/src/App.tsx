@@ -86,7 +86,7 @@ function App() {
 
             <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
               <MuiButton onClick={changeformView} variant='outlined' style={{backgroundColor:'#f44283',textTransform:'none',width:'80%'}}>
-                <span style={{color:'white'}}>Continuar</span>
+                <span style={{color:'white',fontFamily: '"Roboto", sans-serif',fontWeight:400,fontStyle:'normal'}}>Iniciar</span>
               </MuiButton>
             </div>
         </>
