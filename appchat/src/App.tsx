@@ -50,6 +50,7 @@ function App() {
   
   return (
     <main>
+      {/* inicio header */}
       <header>
         <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
          <div>
@@ -61,7 +62,10 @@ function App() {
           <AccessTimeIcon/><span style={{fontFamily: '"Roboto", sans-serif',fontWeight:400,fontStyle:'normal'}}>En menos de 5 minutos</span>
         </div>
       </header>
+      {/* fin header */}
+
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
+      
       {/* 1er contenido */}
       { changeContent ? (
         <>
