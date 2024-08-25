@@ -18,7 +18,7 @@ export class UserEntity {
   maternalsurname!: string;
 
   @Column()
-  birthdate!: string;
+  birthdate!: Date;
 
   @Column()
   email!: string;
