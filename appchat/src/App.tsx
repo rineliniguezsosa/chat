@@ -51,14 +51,14 @@ function App() {
   return (
     <main>
       <header>
-        <div style={{border:'2px green solid',display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+        <div style={{display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
          <div>
-            <h1 style={{fontFamily:'sans-serif'}}>Crear usuario</h1>
+            <h1 style={{fontFamily: '"Roboto", sans-serif',fontWeight:700,fontStyle:'normal'}}>Crear usuario</h1>
          </div>
          <ContentPasteIcon style={{color:'white',fontSize:'5rem'}}/>
         </div>
         <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
-          <AccessTimeIcon/><span>En menos de 5 minutos</span>
+          <AccessTimeIcon/><span style={{fontFamily: '"Roboto", sans-serif',fontWeight:400,fontStyle:'normal'}}>En menos de 5 minutos</span>
         </div>
       </header>
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
