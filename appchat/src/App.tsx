@@ -65,7 +65,7 @@ function App() {
       {/* fin header */}
 
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
-      
+
       {/* 1er contenido */}
       { changeContent ? (
         <>
@@ -79,7 +79,7 @@ function App() {
             </FormInformationCard>
 
             <div style={{ width: '100%', border:'1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
-                <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px' }}>
+                <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px',fontFamily: '"Roboto", sans-serif',fontWeight:500,fontStyle:'normal' }}>
                   <span>Si tus datos son correctos porfavor de continuar</span>
                 </div>
             </div>
