@@ -30,3 +30,10 @@ export interface FormValues {
 export interface FormInformationProps {
     children:React.ReactNode
 }
+
+export interface MuiButtonProps {
+    variant:'outlined',
+    onClick:()=> void,
+    children:React.ReactNode,
+    sx?:SxProps<Theme>,
+}
