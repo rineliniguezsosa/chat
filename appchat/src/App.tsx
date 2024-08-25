@@ -46,7 +46,7 @@ function App() {
           <AccessTimeIcon/><span>En menos de 5 minutos</span>
         </div>
       </header>
-      <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>
+      {form.email && form.telefono && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
 
       <FormWrapper title='Datos de contacto'>
           <MuiTextField
@@ -83,13 +83,15 @@ function App() {
               </div>
           </div>
 
-          <MuiButton onClick={changeformView} variant='outlined' sx={{backgroundColor:'#f44283',color:'white',textTransform:'none',width:'90%'}}>
-            <span>Continuar</span>
-          </MuiButton>
+          <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
+            <MuiButton onClick={changeformView} variant='outlined' sx={{backgroundColor:'#f44283',color:'white',textTransform:'none',width:'90%'}}>
+              <span>Continuar</span>
+            </MuiButton>
+          </div>
       </>
       }
 
-      <FormWrapper title='Datos de contacto'>
+      {/* <FormWrapper title='Datos de contacto'>
           <MuiTextField
             name='nombre'
             type='text'
@@ -99,7 +101,7 @@ function App() {
             sx={{width:'100%',marginBottom:'1rem'}}
             onChange={handleInputChange}
           />
-      </FormWrapper>
+      </FormWrapper> */}
       {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
     </main>
   )
