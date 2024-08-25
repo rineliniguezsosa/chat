@@ -38,7 +38,7 @@ function App() {
   console.log(form);
 
   const changeformView = ()=>{
-    // setProgress(10)
+    setChangeContent(false)
   }
   
   return (
