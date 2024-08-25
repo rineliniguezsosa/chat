@@ -154,6 +154,7 @@ function App() {
         <p>Nombre: {form.name}</p>
         <p>Segundo Nombre: {form.middlename}</p>
         <p>Apellido paterno: {form.paternalsurname}</p>
+        <p>Apellido materno: {form.maternalsurname}</p>
       </AllFormInformation>
       {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
     </main>
