@@ -25,11 +25,11 @@ function App() {
   useEffect(()=>{
     let newprogres:number = 0
     if (form.email && form.phone) {
-      newprogres += 10
+      newprogres += 20
     }
 
-    if(form.name){
-      newprogres += 10
+    if(form.name && form.middlename && form.paternalsurname && form.maternalsurname){
+      newprogres += 30
     }
 
     setProgress(newprogres)
