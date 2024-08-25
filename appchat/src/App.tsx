@@ -5,6 +5,7 @@ import { FormWrapper } from './components/FormWrapper';
 import { MuiTextField } from './components/MuiTextField';
 import { useForm } from './hooks/useForm';
 import { FormInformation } from './components/FormInformation';
+import { MuiButton } from './components/MuiButton';
 
 function App() {
   const { form, handleInputChange } = useForm({
@@ -12,6 +13,10 @@ function App() {
     telefono:''
   })
   console.log(form);
+
+  const changeformView = ()=>{
+
+  }
   
   return (
     <main>
@@ -56,11 +61,16 @@ function App() {
               <p>Correo Electronico: {form.email}</p>
               <p>Telefono Celular: {form.telefono}</p>
           </FormInformation>
-          <div style={{ width: '100%', border: '1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem' }}>
+
+          <div style={{ width: '100%', border: '1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
               <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px' }}>
                 <span>Si tus datos son correctos porfavor de continuar</span>
               </div>
           </div>
+
+          <MuiButton onClick={changeformView} variant='outlined' sx={{backgroundColor:'#f44283',color:'white',textTransform:'none',width:'90%'}}>
+            <span>Continuar</span>
+          </MuiButton>
       </>
       }
       {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
