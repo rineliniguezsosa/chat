@@ -6,6 +6,7 @@ import { ContactviewProps } from "../types/Index"
 
 export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => {
   const fullname = form.name && form.middlename && form.paternalsurname && form.maternalsurname; 
+  const dateofbirth = form.day && form.month && form.year
   return ( 
     <>
         <FormWrapper title='¿Cual es tu nombre?'>
@@ -81,6 +82,13 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
                   sx={{ width: '100%', marginBottom: '1rem' }}
                   onChange={handleInputChange} />
         </FormWrapper>
+
+        { dateofbirth && (
+            <FormInformation>
+                <p>{form.day}/{form.month}/{form.year}</p>
+            </FormInformation>
+        )
+        }
     </>
   )
 }
