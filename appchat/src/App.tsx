@@ -2,7 +2,7 @@ import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { MuiLinearProgress } from './components/MuiLinearProgress';
 import { useForm } from './hooks/useForm';
-import { FormInformation } from './components/FormInformation';
+import { FormInformationCard } from './components/FormInformationCard';
 import { MuiButton } from './components/MuiButton';
 import { useState,useEffect } from 'react';
 import { AllFormInformation } from './components/AllFormInformation';
@@ -69,10 +69,10 @@ function App() {
         
         {form.email && form.phone &&
         <>
-            <FormInformation>
+            <FormInformationCard>
                 <p>Correo Electronico: {form.email}</p>
                 <p>Telefono Celular: {form.phone}</p>
-            </FormInformation>
+            </FormInformationCard>
 
             <div style={{ width: '100%', border:'1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
                 <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px' }}>
