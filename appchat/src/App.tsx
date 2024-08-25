@@ -7,6 +7,7 @@ import { useForm } from './hooks/useForm';
 import { FormInformation } from './components/FormInformation';
 import { MuiButton } from './components/MuiButton';
 import { useState,useEffect } from 'react';
+import { AllFormInformation } from './components/AllFormInformation';
 
 function App() {
   const { form, handleInputChange } = useForm({
@@ -87,13 +88,16 @@ function App() {
           </div>
 
           <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-            <MuiButton onClick={changeformView} variant='outlined' sx={{backgroundColor:'#f44283',color:'white',textTransform:'none',width:'90%'}}>
+            <MuiButton onClick={changeformView} variant='outlined' sx={{backgroundColor:'#f44283',color:'white',textTransform:'none',width:'80%'}}>
               <span>Continuar</span>
             </MuiButton>
           </div>
       </>
       }
-
+      <AllFormInformation>
+        <p>Correo Electronico: {form.email}</p>
+        <p>Telefono Celular: {form.telefono}</p>
+      </AllFormInformation>
       {/* <FormWrapper title='Datos de contacto'>
           <MuiTextField
             name='nombre'
