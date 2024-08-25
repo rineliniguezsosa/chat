@@ -1,10 +1,12 @@
+import { FormInformation } from "../components/FormInformation"
 import { FormWrapper } from "../components/FormWrapper"
 import { MuiTextField } from "../components/MuiTextField"
 import { ContactviewProps } from "../types/Index"
 
 
 export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => {
-  return (
+  const fullname = form.name && form.middlename && form.paternalsurname && form.maternalsurname; 
+  return ( 
     <>
         <FormWrapper title='¿Cual es tu nombre?'>
           <MuiTextField
@@ -43,6 +45,13 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
               sx={{ width: '100%', marginBottom: '1rem' }}
               onChange={handleInputChange} />
         </FormWrapper>
+
+        { fullname && (
+            <FormInformation>
+                <p>{form.name+" "+form.paternalsurname}</p>
+            </FormInformation>
+        )
+        }
 
         <FormWrapper title='¿Cúal es tu fecha de nacimiento?'>
               <MuiTextField
