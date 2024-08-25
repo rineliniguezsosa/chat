@@ -19,7 +19,8 @@ export interface MuiTextFieldProps {
     name:string,
     value:string,
     sx?:SxProps<Theme>,
-    onChange:(e:React.ChangeEvent<HTMLInputElement>)=> void
+    onChange:(e:React.ChangeEvent<HTMLInputElement>)=> void,
+    onKeyDown:(e:React.KeyboardEvent<HTMLInputElement>)=> void
 }
 
 export interface FormValues {
@@ -51,5 +52,6 @@ export interface ContactviewProps{
         month:string,
         year:string
     },
-    handleInputChange:(e:React.ChangeEvent<HTMLInputElement>)=> void
+    handleInputChange:(e:React.ChangeEvent<HTMLInputElement>)=> void,
+    handleKeyDown:(e:React.KeyboardEvent<HTMLInputElement>)=> void
 }
