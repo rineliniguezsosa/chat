@@ -8,7 +8,7 @@ export const FormWrapper = ({title,children}:FormWrapperProps) => {
         <MuiAvatar/>
 
         <div style={{border:'1px blue solid',width:'100%',borderRadius:'10px',backgroundColor:'#f0f0f0',marginLeft:'0.4rem',padding:'0.6rem'}}>
-            <h2 style={{paddingBottom:'1rem'}}>{title}</h2>
+            <h2 style={{paddingBottom:'1rem',fontFamily: '"Roboto", sans-serif',fontWeight:700,fontStyle:'normal'}}>{title}</h2>
             <form>
                 {children}
             </form>
