@@ -18,15 +18,18 @@ function App() {
   const [progress, setProgress] = useState(0)
 
   useEffect(()=>{
+    let newprogres:number = 0
     if (form.email && form.telefono) {
-      setProgress(10)
+      newprogres += 10
     }
 
     if(form.nombre){
-      setProgress(30)
+      newprogres += 10
     }
+
+    setProgress(newprogres)
   },[form])
-  // const [progress, setProgress] = useState<number>(0)
+  
   console.log(form);
 
   const changeformView = ()=>{
