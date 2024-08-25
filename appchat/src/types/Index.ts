@@ -15,7 +15,7 @@ export interface FormWrapperProps {
 export interface MuiTextFieldProps {
     variant:'outlined',
     label:string,
-    type:'text'|'tel'|'email',
+    type:'text'|'tel'|'email'|'number',
     name:string,
     value:string,
     sx?:SxProps<Theme>,
