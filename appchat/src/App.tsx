@@ -8,6 +8,7 @@ import { FormInformation } from './components/FormInformation';
 import { MuiButton } from './components/MuiButton';
 import { useState,useEffect } from 'react';
 import { AllFormInformation } from './components/AllFormInformation';
+import { Contactview } from './views/Contactview';
 
 function App() {
   const { form, handleInputChange } = useForm({
@@ -55,7 +56,7 @@ function App() {
         </div>
       </header>
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
-
+      <Contactview form={form}/>
       {/* 1er contenido */}
       { changeContent ? (
         <>
