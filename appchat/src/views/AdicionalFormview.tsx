@@ -1,4 +1,4 @@
-import { FormInformation } from "../components/FormInformation"
+import { FormInformationCard } from "../components/FormInformationCard"
 import { FormWrapper } from "../components/FormWrapper"
 import { MuiTextField } from "../components/MuiTextField"
 import { ContactviewProps } from "../types/Index"
@@ -48,9 +48,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
         </FormWrapper>
 
         { fullname && (
-            <FormInformation>
+            <FormInformationCard>
                 <p>{form.name+" "+form.paternalsurname}</p>
-            </FormInformation>
+            </FormInformationCard>
         )
         }
 
@@ -84,9 +84,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
         </FormWrapper>
 
         { dateofbirth && (
-            <FormInformation>
+            <FormInformationCard>
                 <p>{form.day}/{form.month}/{form.year}</p>
-            </FormInformation>
+            </FormInformationCard>
         )
         }
     </>
