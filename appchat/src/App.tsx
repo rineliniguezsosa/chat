@@ -1,14 +1,13 @@
 import ContentPasteIcon from '@mui/icons-material/ContentPaste';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { MuiLinearProgress } from './components/MuiLinearProgress';
-import { FormWrapper } from './components/FormWrapper';
-import { MuiTextField } from './components/MuiTextField';
 import { useForm } from './hooks/useForm';
 import { FormInformation } from './components/FormInformation';
 import { MuiButton } from './components/MuiButton';
 import { useState,useEffect } from 'react';
 import { AllFormInformation } from './components/AllFormInformation';
 import { ContactFormview } from './views/ContactFormview';
+import { AdicionalFormview } from './views/AdicionalFormview';
 
 function App() {
   const { form, handleInputChange } = useForm({
@@ -84,47 +83,7 @@ function App() {
         </>
       )
       : (
-        <FormWrapper title='¿Cual es tu nombre?'>
-          <MuiTextField
-            name='name'
-            type='text'
-            label='Nombre'
-            variant='outlined'
-            value={form.name}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-
-          <MuiTextField
-            name='middlename'
-            type='text'
-            label='Segundo nombre'
-            variant='outlined'
-            value={form.middlename}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-
-          <MuiTextField
-            name='paternalsurname'
-            type='text'
-            label='Apellido paterno'
-            variant='outlined'
-            value={form.paternalsurname}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-
-          <MuiTextField
-            name='maternalsurname'
-            type='text'
-            label='Apellido materno'
-            variant='outlined'
-            value={form.maternalsurname}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-      </FormWrapper> 
+        <AdicionalFormview form={form} handleInputChange={handleInputChange}/> 
       )
       }
 
