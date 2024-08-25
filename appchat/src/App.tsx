@@ -16,7 +16,10 @@ function App() {
     name: '',
     middlename:'',
     paternalsurname:'',
-    maternalsurname:''
+    maternalsurname:'',
+    day:'',
+    month:'',
+    year:''
   })
 
   const [progress, setProgress] = useState(0)
