@@ -3,7 +3,7 @@ import { FormWrapper } from '../components/FormWrapper';
 import { MuiTextField } from '../components/MuiTextField';
 import { ContactviewProps } from '../types/Index'
 
-export const Contactview = ({form,handleInputChange}:ContactviewProps) => {
+export const ContactFormview = ({form,handleInputChange}:ContactviewProps) => {
   return (
     <FormWrapper title='Datos de contacto'>
             <MuiTextField
