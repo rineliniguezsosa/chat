@@ -2,6 +2,7 @@ import express from 'express';
 import * as dotenv from 'dotenv'
 import { Connectdb } from './config/connectdb';
 import { userRouter } from './routes';
+import cors from 'cors';
 
 dotenv.config()
 
