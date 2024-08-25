@@ -97,6 +97,7 @@ function App() {
         <p>Segundo Nombre: {form.middlename}</p>
         <p>Apellido paterno: {form.paternalsurname}</p>
         <p>Apellido materno: {form.maternalsurname}</p>
+        <p>Fecha de nacimiento: {form.day}/{form.month}/{form.year}</p>
       </AllFormInformation>
       {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
     </main>
