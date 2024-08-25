@@ -15,7 +15,8 @@ function App() {
     phone:'',
     name: '',
     middlename:'',
-    paternalsurname:''
+    paternalsurname:'',
+    maternalsurname:''
   })
 
   const [progress, setProgress] = useState(0)
@@ -90,8 +91,8 @@ function App() {
           </div>
 
           <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-            <MuiButton onClick={changeformView} variant='outlined' sx={{backgroundColor:'#f44283',color:'white',textTransform:'none',width:'80%'}}>
-              <span>Continuar</span>
+            <MuiButton onClick={changeformView} variant='outlined' style={{backgroundColor:'#f44283',textTransform:'none',width:'80%'}}>
+              <span style={{color:'white'}}>Continuar</span>
             </MuiButton>
           </div>
       </>
@@ -124,6 +125,16 @@ function App() {
             label='Apellido paterno'
             variant='outlined'
             value={form.paternalsurname}
+            sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
+          />
+
+          <MuiTextField
+            name='maternalsurname'
+            type='text'
+            label='Apellido materno'
+            variant='outlined'
+            value={form.maternalsurname}
             sx={{width:'100%',marginBottom:'1rem'}}
             onChange={handleInputChange}
           />
