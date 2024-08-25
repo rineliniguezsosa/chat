@@ -16,8 +16,20 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
         }));
     } 
 
+    const SendForm = () =>{
+        console.log('value of form',form);
+        
+    }
+    
+    const handleKeyDown = (e:React.KeyboardEvent<HTMLInputElement>)=>{
+        if (e.key == 'Enter') {
+          e.preventDefault();
+          SendForm()
+        }
+    }
     return {
         form,
-        handleInputChange
+        handleInputChange,
+        handleKeyDown 
     }
 }
