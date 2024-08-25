@@ -153,6 +153,7 @@ function App() {
         <p>Telefono Celular: {form.phone}</p>
         <p>Nombre: {form.name}</p>
         <p>Segundo Nombre: {form.middlename}</p>
+        <p>Apellido paterno: {form.paternalsurname}</p>
       </AllFormInformation>
       {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
     </main>
