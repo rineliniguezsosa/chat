@@ -17,6 +17,11 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
     } 
 
     const SendForm = () =>{
+        const isValid = !form.name || !form.email || !form.phone || !form.middlename || !form.paternalsurname || !form.maternalsurname || !form.day || !form.month || !form.year
+        if (isValid) {
+            alert('Todos los campos son requeridos!!');
+            return;
+        }
         console.log('value of form',form);
         
     }
