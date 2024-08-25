@@ -38,3 +38,14 @@ export interface MuiButtonProps {
     sx?:SxProps<Theme>,
     style:CSSProperties
 }
+
+export interface ContactviewProps{
+    form:{
+        email:string,
+        phone:string,
+        name: string,
+        middlename:string,
+        paternalsurname:string,
+        maternalsurname:string
+    }
+}
