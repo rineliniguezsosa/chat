@@ -41,9 +41,25 @@ function App() {
     setChangeContent(false)
   }
   
-  const ContactForm = () => {
-    return (
-         <FormWrapper title='Datos de contacto'>
+  return (
+    <main>
+      <header>
+        <div style={{border:'2px green solid',display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
+         <div>
+            <h1 style={{fontFamily:'sans-serif'}}>Crear usuario</h1>
+         </div>
+         <ContentPasteIcon style={{color:'white',fontSize:'5rem'}}/>
+        </div>
+        <div>
+          <AccessTimeIcon/><span>En menos de 5 minutos</span>
+        </div>
+      </header>
+      {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
+
+      {/* 1er contenido */}
+      { changeContent ? (
+        <>
+        <FormWrapper title='Datos de contacto'>
             <MuiTextField
               name='email'
               type='email'
@@ -64,73 +80,7 @@ function App() {
               onChange={handleInputChange}
             />
         </FormWrapper>
-    )
-  }
 
-  const AdicionalForm = ()=>{
-    return(
-      <FormWrapper title='¿Cual es tu nombre?'>
-        <MuiTextField
-          name='name'
-          type='text'
-          label='Nombre'
-          variant='outlined'
-          value={form.name}
-          sx={{width:'100%',marginBottom:'1rem'}}
-          onChange={handleInputChange}
-        />
-
-        <MuiTextField
-          name='middlename'
-          type='text'
-          label='Segundo nombre'
-          variant='outlined'
-          value={form.middlename}
-          sx={{width:'100%',marginBottom:'1rem'}}
-          onChange={handleInputChange}
-        />
-
-        <MuiTextField
-          name='paternalsurname'
-          type='text'
-          label='Apellido paterno'
-          variant='outlined'
-          value={form.paternalsurname}
-          sx={{width:'100%',marginBottom:'1rem'}}
-          onChange={handleInputChange}
-        />
-
-        <MuiTextField
-          name='maternalsurname'
-          type='text'
-          label='Apellido materno'
-          variant='outlined'
-          value={form.maternalsurname}
-          sx={{width:'100%',marginBottom:'1rem'}}
-          onChange={handleInputChange}
-        />
-    </FormWrapper>
-    )
-  }
-  return (
-    <main>
-      <header>
-        <div style={{border:'2px green solid',display:'flex',flexDirection:'row',justifyContent:'space-between'}}>
-         <div>
-            <h1 style={{fontFamily:'sans-serif'}}>Crear usuario</h1>
-         </div>
-         <ContentPasteIcon style={{color:'white',fontSize:'5rem'}}/>
-        </div>
-        <div>
-          <AccessTimeIcon/><span>En menos de 5 minutos</span>
-        </div>
-      </header>
-      {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
-
-      {/* 1er contenido */}
-      { changeContent ? (
-        <>
-        <ContactForm />
         {form.email && form.phone &&
         <>
             <FormInformation>
@@ -154,10 +104,49 @@ function App() {
         </>
       )
       : (
-        <AdicionalForm/>
+        <FormWrapper title='¿Cual es tu nombre?'>
+          <MuiTextField
+            name='name'
+            type='text'
+            label='Nombre'
+            variant='outlined'
+            value={form.name}
+            sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
+          />
+
+          <MuiTextField
+            name='middlename'
+            type='text'
+            label='Segundo nombre'
+            variant='outlined'
+            value={form.middlename}
+            sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
+          />
+
+          <MuiTextField
+            name='paternalsurname'
+            type='text'
+            label='Apellido paterno'
+            variant='outlined'
+            value={form.paternalsurname}
+            sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
+          />
+
+          <MuiTextField
+            name='maternalsurname'
+            type='text'
+            label='Apellido materno'
+            variant='outlined'
+            value={form.maternalsurname}
+            sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
+          />
+      </FormWrapper> 
       )
       }
-
 
       <AllFormInformation>
         <p>Correo Electronico: {form.email}</p>
