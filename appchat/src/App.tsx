@@ -10,7 +10,7 @@ import { ContactFormview } from './views/ContactFormview';
 import { AdicionalFormview } from './views/AdicionalFormview';
 
 function App() {
-  const { form, handleInputChange } = useForm({
+  const { form, handleInputChange,handleKeyDown } = useForm({
     email:'',
     phone:'',
     name: '',
@@ -69,7 +69,7 @@ function App() {
       {/* 1er contenido */}
       { changeContent ? (
         <>
-        <ContactFormview form={form} handleInputChange={handleInputChange}/>
+        <ContactFormview form={form} handleInputChange={handleInputChange}  handleKeyDown={handleKeyDown}/>
         
         {form.email && form.phone &&
         <>
@@ -94,7 +94,7 @@ function App() {
         </>
       )
       : (
-        <AdicionalFormview form={form} handleInputChange={handleInputChange}/> 
+        <AdicionalFormview form={form} handleInputChange={handleInputChange} handleKeyDown={handleKeyDown}/> 
       )
       }
 
