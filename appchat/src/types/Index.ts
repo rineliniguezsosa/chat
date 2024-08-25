@@ -1,5 +1,5 @@
 import { SxProps, Theme } from '@mui/system';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 
 export interface LinerProgressProps {
     variant:'determinate',
@@ -36,4 +36,5 @@ export interface MuiButtonProps {
     onClick:()=> void,
     children:React.ReactNode,
     sx?:SxProps<Theme>,
+    style:CSSProperties
 }
