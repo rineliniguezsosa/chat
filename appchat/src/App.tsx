@@ -152,6 +152,7 @@ function App() {
         <p>Correo Electronico: {form.email}</p>
         <p>Telefono Celular: {form.phone}</p>
         <p>Nombre: {form.name}</p>
+        <p>Segundo Nombre: {form.middlename}</p>
       </AllFormInformation>
       {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
     </main>
