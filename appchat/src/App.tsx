@@ -56,32 +56,11 @@ function App() {
         </div>
       </header>
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
-      <Contactview form={form}/>
       {/* 1er contenido */}
       { changeContent ? (
         <>
-        <FormWrapper title='Datos de contacto'>
-            <MuiTextField
-              name='email'
-              type='email'
-              label='Correo electronico'
-              variant='outlined'
-              value={form.email}
-              sx={{width:'100%',marginBottom:'1rem'}}
-              onChange={handleInputChange}
-            />
-
-            <MuiTextField
-              name='phone'
-              type='tel'
-              label='Teléfono celular'
-              variant='outlined'
-              value={form.phone}
-              sx={{width:'100%',marginBottom:'1rem'}}
-              onChange={handleInputChange}
-            />
-        </FormWrapper>
-
+        <Contactview form={form} handleInputChange={handleInputChange}/>
+        
         {form.email && form.phone &&
         <>
             <FormInformation>
