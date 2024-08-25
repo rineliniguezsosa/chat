@@ -14,7 +14,8 @@ function App() {
     email:'',
     phone:'',
     name: '',
-    middlename:''
+    middlename:'',
+    paternalsurname:''
   })
 
   const [progress, setProgress] = useState(0)
@@ -113,6 +114,16 @@ function App() {
             label='Segundo nombre'
             variant='outlined'
             value={form.middlename}
+            sx={{width:'100%',marginBottom:'1rem'}}
+            onChange={handleInputChange}
+          />
+
+          <MuiTextField
+            name='paternalsurname'
+            type='text'
+            label='Apellido paterno'
+            variant='outlined'
+            value={form.paternalsurname}
             sx={{width:'100%',marginBottom:'1rem'}}
             onChange={handleInputChange}
           />
