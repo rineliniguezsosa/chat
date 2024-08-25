@@ -4,9 +4,10 @@ import { MuiTextField } from "../components/MuiTextField"
 import { ContactviewProps } from "../types/Index"
 
 
-export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => {
+export const AdicionalFormview = ({form,handleInputChange,handleKeyDown}:ContactviewProps) => {
   const fullname = form.name && form.middlename && form.paternalsurname && form.maternalsurname; 
   const dateofbirth = form.day && form.month && form.year
+
   return ( 
     <>
         <FormWrapper title='¿Cual es tu nombre?'>
@@ -17,8 +18,10 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
               variant='outlined'
               value={form.name}
               sx={{ width: '100%', marginBottom: '1rem' }}
-              onChange={handleInputChange} />
-
+              onChange={handleInputChange} 
+              onKeyDown={handleKeyDown}
+            />
+            
           <MuiTextField
               name='middlename'
               type='text'
@@ -26,7 +29,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
               variant='outlined'
               value={form.middlename}
               sx={{ width: '100%', marginBottom: '1rem' }}
-              onChange={handleInputChange} />
+              onChange={handleInputChange} 
+              onKeyDown={handleKeyDown}
+            />
 
           <MuiTextField
               name='paternalsurname'
@@ -35,7 +40,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
               variant='outlined'
               value={form.paternalsurname}
               sx={{ width: '100%', marginBottom: '1rem' }}
-              onChange={handleInputChange} />
+              onChange={handleInputChange} 
+              onKeyDown={handleKeyDown}
+            />
 
           <MuiTextField
               name='maternalsurname'
@@ -44,7 +51,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
               variant='outlined'
               value={form.maternalsurname}
               sx={{ width: '100%', marginBottom: '1rem' }}
-              onChange={handleInputChange} />
+              onChange={handleInputChange} 
+              onKeyDown={handleKeyDown}
+              />
         </FormWrapper>
 
         { fullname && (
@@ -62,7 +71,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
                   variant='outlined'
                   value={form.day}
                   sx={{ width: '100%', marginBottom: '1rem' }}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange}
+                  onKeyDown={handleKeyDown}
+                />
 
               <MuiTextField
                   name='month'
@@ -71,7 +82,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
                   variant='outlined'
                   value={form.month}
                   sx={{ width: '100%', marginBottom: '1rem' }}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange} 
+                  onKeyDown={handleKeyDown}
+                />
 
               <MuiTextField
                   name='year'
@@ -80,7 +93,9 @@ export const AdicionalFormview = ({form,handleInputChange}:ContactviewProps) => 
                   variant='outlined'
                   value={form.year}
                   sx={{ width: '100%', marginBottom: '1rem' }}
-                  onChange={handleInputChange} />
+                  onChange={handleInputChange} 
+                  onKeyDown={handleKeyDown}
+              />
         </FormWrapper>
 
         { dateofbirth && (
