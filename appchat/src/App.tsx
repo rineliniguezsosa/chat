@@ -8,7 +8,7 @@ import { FormInformation } from './components/FormInformation';
 import { MuiButton } from './components/MuiButton';
 import { useState,useEffect } from 'react';
 import { AllFormInformation } from './components/AllFormInformation';
-import { Contactview } from './views/Contactview';
+import { ContactFormview } from './views/ContactFormview';
 
 function App() {
   const { form, handleInputChange } = useForm({
@@ -59,7 +59,7 @@ function App() {
       {/* 1er contenido */}
       { changeContent ? (
         <>
-        <Contactview form={form} handleInputChange={handleInputChange}/>
+        <ContactFormview form={form} handleInputChange={handleInputChange}/>
         
         {form.email && form.phone &&
         <>
