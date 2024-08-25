@@ -35,6 +35,10 @@ function App() {
       newprogres += 30
     }
 
+    if(form.day && form.month && form.year){
+      newprogres += 50
+    }
+
     setProgress(newprogres)
   },[form])
   
