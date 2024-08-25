@@ -41,6 +41,77 @@ function App() {
     setChangeContent(false)
   }
   
+  const ContactForm = () => {
+    return (
+         <FormWrapper title='Datos de contacto'>
+            <MuiTextField
+              name='email'
+              type='email'
+              label='Correo electronico'
+              variant='outlined'
+              value={form.email}
+              sx={{width:'100%',marginBottom:'1rem'}}
+              onChange={handleInputChange}
+            />
+
+            <MuiTextField
+              name='phone'
+              type='tel'
+              label='Teléfono celular'
+              variant='outlined'
+              value={form.phone}
+              sx={{width:'100%',marginBottom:'1rem'}}
+              onChange={handleInputChange}
+            />
+        </FormWrapper>
+    )
+  }
+
+  const AdicionalForm = ()=>{
+    return(
+      <FormWrapper title='¿Cual es tu nombre?'>
+        <MuiTextField
+          name='name'
+          type='text'
+          label='Nombre'
+          variant='outlined'
+          value={form.name}
+          sx={{width:'100%',marginBottom:'1rem'}}
+          onChange={handleInputChange}
+        />
+
+        <MuiTextField
+          name='middlename'
+          type='text'
+          label='Segundo nombre'
+          variant='outlined'
+          value={form.middlename}
+          sx={{width:'100%',marginBottom:'1rem'}}
+          onChange={handleInputChange}
+        />
+
+        <MuiTextField
+          name='paternalsurname'
+          type='text'
+          label='Apellido paterno'
+          variant='outlined'
+          value={form.paternalsurname}
+          sx={{width:'100%',marginBottom:'1rem'}}
+          onChange={handleInputChange}
+        />
+
+        <MuiTextField
+          name='maternalsurname'
+          type='text'
+          label='Apellido materno'
+          variant='outlined'
+          value={form.maternalsurname}
+          sx={{width:'100%',marginBottom:'1rem'}}
+          onChange={handleInputChange}
+        />
+    </FormWrapper>
+    )
+  }
   return (
     <main>
       <header>
@@ -57,92 +128,35 @@ function App() {
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
 
       {/* 1er contenido */}
-      <FormWrapper title='Datos de contacto'>
-          <MuiTextField
-            name='email'
-            type='email'
-            label='Correo electronico'
-            variant='outlined'
-            value={form.email}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
+      { changeContent ? (
+        <>
+        <ContactForm />
+        {form.email && form.phone &&
+        <>
+            <FormInformation>
+                <p>Correo Electronico: {form.email}</p>
+                <p>Telefono Celular: {form.phone}</p>
+            </FormInformation>
 
-          <MuiTextField
-            name='phone'
-            type='tel'
-            label='Teléfono celular'
-            variant='outlined'
-            value={form.phone}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-      </FormWrapper>
+            <div style={{ width: '100%', border:'1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
+                <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px' }}>
+                  <span>Si tus datos son correctos porfavor de continuar</span>
+                </div>
+            </div>
 
-      {form.email && form.phone &&
-      <>
-          <FormInformation>
-              <p>Correo Electronico: {form.email}</p>
-              <p>Telefono Celular: {form.phone}</p>
-          </FormInformation>
-
-          <div style={{ width: '100%', border:'1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
-              <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px' }}>
-                <span>Si tus datos son correctos porfavor de continuar</span>
-              </div>
-          </div>
-
-          <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
-            <MuiButton onClick={changeformView} variant='outlined' style={{backgroundColor:'#f44283',textTransform:'none',width:'80%'}}>
-              <span style={{color:'white'}}>Continuar</span>
-            </MuiButton>
-          </div>
-      </>
+            <div style={{width:'100%',display:'flex',justifyContent:'center'}}>
+              <MuiButton onClick={changeformView} variant='outlined' style={{backgroundColor:'#f44283',textTransform:'none',width:'80%'}}>
+                <span style={{color:'white'}}>Continuar</span>
+              </MuiButton>
+            </div>
+        </>
+        }
+        </>
+      )
+      : (
+        <AdicionalForm/>
+      )
       }
-      
-      {/* 1er contenido */}
-
-      <FormWrapper title='¿Cual es tu nombre?'>
-          <MuiTextField
-            name='name'
-            type='text'
-            label='Nombre'
-            variant='outlined'
-            value={form.name}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-
-          <MuiTextField
-            name='middlename'
-            type='text'
-            label='Segundo nombre'
-            variant='outlined'
-            value={form.middlename}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-
-          <MuiTextField
-            name='paternalsurname'
-            type='text'
-            label='Apellido paterno'
-            variant='outlined'
-            value={form.paternalsurname}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-
-          <MuiTextField
-            name='maternalsurname'
-            type='text'
-            label='Apellido materno'
-            variant='outlined'
-            value={form.maternalsurname}
-            sx={{width:'100%',marginBottom:'1rem'}}
-            onChange={handleInputChange}
-          />
-      </FormWrapper>
 
 
       <AllFormInformation>
