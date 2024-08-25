@@ -47,5 +47,6 @@ export interface ContactviewProps{
         middlename:string,
         paternalsurname:string,
         maternalsurname:string
-    }
+    },
+    handleInputChange:(e:React.ChangeEvent<HTMLInputElement>)=> void
 }
