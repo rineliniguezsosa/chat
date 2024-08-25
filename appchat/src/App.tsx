@@ -20,6 +20,7 @@ function App() {
   })
 
   const [progress, setProgress] = useState(0)
+  const [changeContent, setChangeContent] = useState(true)
 
   useEffect(()=>{
     let newprogres:number = 0
@@ -55,6 +56,7 @@ function App() {
       </header>
       {form.email && form.phone && <MuiLinearProgress sx={{width:'100%'}} value={progress} variant='determinate'/>}
 
+      {/* 1er contenido */}
       <FormWrapper title='Datos de contacto'>
           <MuiTextField
             name='email'
@@ -97,6 +99,8 @@ function App() {
           </div>
       </>
       }
+      
+      {/* 1er contenido */}
 
       <FormWrapper title='¿Cual es tu nombre?'>
           <MuiTextField
