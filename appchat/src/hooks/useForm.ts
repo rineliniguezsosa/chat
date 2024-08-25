@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 import axios from 'axios';
 
+
 interface FormState<T> {
     [key: string]: T;
 }
 
 export const useForm = <T extends FormState<string>>(initialForm: T) =>{
     const [form, setform] = useState(initialForm)
+    const apiUrl = import.meta.env.VITE_API_URL;
     
     const handleInputChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
         const { name, value } = e.target
@@ -17,13 +19,34 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
         }));
     } 
 
-    const SendForm = () =>{
-        const isValid = !form.name || !form.email || !form.phone || !form.middlename || !form.paternalsurname || !form.maternalsurname || !form.day || !form.month || !form.year
+    const SendForm = async() =>{
+        const { name,email,phone,middlename,paternalsurname,maternalsurname,day,month,year  } = form
+        const isValid = !name || !email || !phone || !middlename || !paternalsurname || !maternalsurname || !day || !month || !year
+    
+        const data = {
+            name,
+            email,
+            phone,
+            middlename,
+            paternalsurname,
+            maternalsurname,
+            birdthdate:`${year}-${month}-${day}`,
+        }
+    
         if (isValid) {
             alert('Todos los campos son requeridos!!');
             return;
         }
-        console.log('value of form',form);
+
+        try {
+            const req = await axios.post(`${apiUrl}/user/save`,{data})
+            const resp = await req.data
+            console.log(resp);
+            console.log('value of form',form);
+        } catch (error) {
+            console.log(error);
+            alert('Algo salio mal vuelva a intentar')
+        }
         
     }
     
@@ -33,6 +56,7 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
           SendForm()
         }
     }
+    
     return {
         form,
         handleInputChange,
