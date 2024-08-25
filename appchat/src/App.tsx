@@ -4,6 +4,7 @@ import { MuiLinearProgress } from './components/MuiLinearProgress';
 import { FormWrapper } from './components/FormWrapper';
 import { MuiTextField } from './components/MuiTextField';
 import { useForm } from './hooks/useForm';
+import { FormInformation } from './components/FormInformation';
 
 function App() {
   const { form, handleInputChange } = useForm({
@@ -48,6 +49,14 @@ function App() {
             onChange={handleInputChange}
           />
       </FormWrapper>
+
+      {form.email && form.telefono &&
+      <FormInformation>
+          <p>Correo Electronico: {form.email}</p>
+          <p>Telefono Celular: {form.telefono}</p>
+      </FormInformation>
+      }
+      {/* {form.email && form.telefono && <FormInformation></FormInformation>} */}
     </main>
   )
 }
