@@ -26,3 +26,7 @@ export interface FormValues {
     email: string;
     telefono: string;
 }
+
+export interface FormInformationProps {
+    children:React.ReactNode
+}
