@@ -1,9 +1,9 @@
 # Challengue - Chat mern
 
-Este es un proyecto de aplicación de chat construido utilizando el stack MERN (TypeORM, Express, React, Node.js) con TypeScript. El proyecto está dividido en dos partes principales:
+This is a chat application project built using the MERN (TypeORM, Express, React, Node.js) stack with TypeScript. The project is divided into two main parts:
 
-- **Backend (API Chat)**: Construido con Node.js y TypeScript.
-- **Frontend (App Chat)**: Construido con React y Vite.
+- **Backend (API Chat)**: Built with Node.js and TypeScript.
+- **Frontend (App Chat)**: Built with React Typescript and Vite
 
 
 ## Table of contents
