@@ -10,8 +10,8 @@ Este es un proyecto de aplicación de chat construido utilizando el stack MERN (
 
 - [Author](#author)
 - [Requirements](#requirements)
-- [Install](#install)
-- [Deployment](#deployment)
+- [Install and Deployment](#install)
+
 
 
 ## Author
@@ -23,7 +23,8 @@ Este es un proyecto de aplicación de chat construido utilizando el stack MERN (
 - [Visual Studio Code](https://code.visualstudio.com/) (or any other code editor of your choice)
 - [Node.js](https://nodejs.org/)
 - npm (version 6 or higher) - This comes with Node.js, but make sure you have the latest version by running `npm install -g npm`.
-
+- MySQL (solo si se usa en el proyecto)
+ 
 ## Install
 
 Follow these steps to download and run the project locally
@@ -34,3 +35,15 @@ Follow these steps to download and run the project locally
 
    ```bash
    git clone https://github.com/rineliniguezsosa/chat.git
+   ```
+
+2. **Navigate to the apichat backend folder**
+
+    ```bash
+    cd apichat
+    ```
+3. **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
