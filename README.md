@@ -47,3 +47,20 @@ Follow these steps to download and run the project locally
     ```bash
     npm install
     ```
+
+4. **Create an .env file in the root of the apichat folder and configure the necessary environment variables. Example of .env file:**
+
+    ```bash
+        PORTSERVER #express server execution port
+        HOST #connection host
+        USERNAME #username
+        PASSWORD #password
+        DB #data base
+        DB_PORT #db port
+        ORIGIN #url of your front-end so that cors allows input requests
+    ```
+5. **Start the backend server:**
+
+    ```bash
+       npm run dev
+    ```
