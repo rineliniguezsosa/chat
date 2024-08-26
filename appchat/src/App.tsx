@@ -76,8 +76,8 @@ function App() {
                 <p>Telefono Celular: {form.phone}</p>
             </FormInformationCard>
 
-            <div style={{ width: '100%', border:'1px red solid', display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
-                <div style={{ border: '1px green solid', width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px',fontFamily: '"Roboto", sans-serif',fontWeight:500,fontStyle:'normal' }}>
+            <div style={{ width: '100%',display: 'flex', justifyContent: 'end',marginTop:'1rem',padding:'1rem' }}>
+                <div style={{width: '80%', height: 'auto', padding: '1rem', backgroundColor: '#f0f0f0', borderRadius: '9px',fontFamily: '"Roboto", sans-serif',fontWeight:500,fontStyle:'normal' }}>
                   <span>Si tus datos son correctos porfavor de continuar</span>
                 </div>
             </div>
