@@ -43,6 +43,7 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
             const resp = await req.data
             console.log(resp);
             console.log('value of form',form);
+            sessionStorage.setItem('usuario',JSON.stringify(data))
         } catch (error) {
             console.log(error);
             alert('Algo salio mal vuelva a intentar')
@@ -56,7 +57,7 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
           SendForm()
         }
     }
-    
+
     return {
         form,
         handleInputChange,
