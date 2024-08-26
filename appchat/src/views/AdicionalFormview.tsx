@@ -73,6 +73,12 @@ export const AdicionalFormview = ({form,handleInputChange,handleKeyDown}:Contact
                   sx={{ width: '100%', marginBottom: '1rem' }}
                   onChange={handleInputChange}
                   onKeyDown={handleKeyDown}
+                  InputProps={{
+                    inputProps:{
+                      pattern: "\\d{2}",
+                      maxLength: 2
+                    }
+                  }}
                 />
 
               <MuiTextField
@@ -84,6 +90,12 @@ export const AdicionalFormview = ({form,handleInputChange,handleKeyDown}:Contact
                   sx={{ width: '100%', marginBottom: '1rem' }}
                   onChange={handleInputChange} 
                   onKeyDown={handleKeyDown}
+                  InputProps={{
+                    inputProps:{
+                      pattern: "\\d{2}",  
+                      maxLength: 2
+                    }
+                  }}
                 />
 
               <MuiTextField
@@ -95,6 +107,12 @@ export const AdicionalFormview = ({form,handleInputChange,handleKeyDown}:Contact
                   sx={{ width: '100%', marginBottom: '1rem' }}
                   onChange={handleInputChange} 
                   onKeyDown={handleKeyDown}
+                  InputProps={{
+                    inputProps:{
+                      pattern: "\\d{4}",  
+                      maxLength: 4
+                    }
+                  }}
               />
         </FormWrapper>
 
