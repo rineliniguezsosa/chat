@@ -25,25 +25,25 @@ export const useForm = <T extends FormState<string>>(initialForm: T) =>{
     
         const data = {
             name,
-            email,
-            phone,
             middlename,
             paternalsurname,
             maternalsurname,
-            birdthdate:`${year}-${month}-${day}`,
+            email,
+            phone,
+            birthdate:`${year}-${month}-${day}`
         }
-    
+        
         if (isValid) {
             alert('Todos los campos son requeridos!!');
             return;
         }
 
         try {
-            const req = await axios.post(`${apiUrl}/user/save`,{data})
+            const req = await axios.post(`${apiUrl}`,data)
             const resp = await req.data
             console.log(resp);
-            console.log('value of form',form);
             sessionStorage.setItem('usuario',JSON.stringify(data))
+            alert('Creación de usuario exitosa :)')
         } catch (error) {
             console.log(error);
             alert('Algo salio mal vuelva a intentar')
