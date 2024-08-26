@@ -1,7 +1,7 @@
 import { TextField } from "@mui/material"
 import { MuiTextFieldProps } from '../types/Index.ts'
 
-export const MuiTextField = ({name,label,type,value,variant,sx,onChange,onKeyDown}:MuiTextFieldProps) => {
+export const MuiTextField = ({name,label,type,value,variant,sx,onChange,onKeyDown,InputProps}:MuiTextFieldProps) => {
   return (
     <TextField
         name={name}
@@ -12,6 +12,7 @@ export const MuiTextField = ({name,label,type,value,variant,sx,onChange,onKeyDow
         sx={sx}
         onChange={onChange}
         onKeyDown={onKeyDown}
+        InputProps={InputProps}
     />
   )
 }
