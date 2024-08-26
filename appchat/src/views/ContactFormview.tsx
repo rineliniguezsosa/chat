@@ -27,6 +27,12 @@ export const ContactFormview = ({form,handleInputChange,handleKeyDown}:Contactvi
               sx={{width:'100%',marginBottom:'1rem'}}
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
+              InputProps={{
+                inputProps:{
+                  pattern: "\\d{10}",
+                  maxLength: 10
+                }
+              }}
             />
         </FormWrapper>
   )
