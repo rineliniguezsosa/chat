@@ -64,3 +64,27 @@ Follow these steps to download and run the project locally
     ```bash
        npm run dev
     ```
+
+## Front end appchat 
+
+1. **Navigate to the appchat frontend folder:**
+
+    ```bash
+    cd appchat
+    ```
+
+2. **Install the dependencies:**
+
+    ```bash
+    npm install
+    ```
+3. Set the .env environment variables in the root of the appchat folder
+
+    ```bash
+    VITE_API_URL #backend url to access the user creation service
+    ```
+4. **Start the frontend server:**
+
+    ```bash
+    npm run dev
+    ```
