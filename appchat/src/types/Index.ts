@@ -1,3 +1,4 @@
+import { OutlinedInputProps } from '@mui/material';
 import { SxProps, Theme } from '@mui/system';
 import React, { CSSProperties } from 'react';
 
@@ -20,7 +21,8 @@ export interface MuiTextFieldProps {
     value:string,
     sx?:SxProps<Theme>,
     onChange:(e:React.ChangeEvent<HTMLInputElement>)=> void,
-    onKeyDown:(e:React.KeyboardEvent<HTMLInputElement>)=> void
+    onKeyDown:(e:React.KeyboardEvent<HTMLInputElement>)=> void,
+    InputProps?:Partial<OutlinedInputProps> 
 }
 
 export interface FormValues {
